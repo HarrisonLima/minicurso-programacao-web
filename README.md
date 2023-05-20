@@ -1,1 +1,3 @@
-# minicurso-programacao-web
+aluno = 'Harrison';
+
+console.log('Desenvolvido por: ' + aluno)
