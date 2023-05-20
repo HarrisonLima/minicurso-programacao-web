@@ -1,0 +1,17 @@
+body {
+  background: #141414;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 1500px;
+  width: 100%;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
