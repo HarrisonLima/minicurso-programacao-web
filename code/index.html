@@ -6,22 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify</title>
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/fb57ddc8bd.js"
+      crossorigin="anonymous"
+    ></script>
+
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div class="content">
       <p class="title">Qual música você deseja ouvir?</p>
+
+      <div class="carousel">
+        <div id="cardThings" class="card">
+          <img class="image" src="./contents/images/THINGS.jpg" />
+          <div class="card-informations">
+            <p class="card__song--name">Things</p>
+            <p class="card__author--name">Vintage Culture, Wolf Player, Jets</p>
+          </div>
+        </div>
+        <div id="cardCante" class="card">
+          <img class="image" src="./contents/images/CANTE_POR_NOS.jpg" />
+          <div class="card-informations">
+            <p class="card__song--name">Cante por nós</p>
+            <p class="card__author--name">Vintage Culture, Wolf Player, Jets</p>
+          </div>
+        </div>
+        <div id="cardFerroriginalremix" class="card">
+          <img class="image" src="./contents/images/FREE_ORIGINAL_REMIX.jpg" />
+          <div class="card-informations">
+            <p class="card__song--name">Free original remix</p>
+            <p class="card__author--name">Vintage Culture, Wolf Player, Jets</p>
+          </div>
+        </div>
+        <div id="cardMoveyourbody" class="card">
+          <img class="image" src="./contents/images/MOVE_YOUR_BODY.jpg" />
+          <div class="card-informations">
+            <p class="card__song--name">Move your body</p>
+            <p class="card__author--name">Vintage Culture, Wolf Player, Jets</p>
+          </div>
+        </div>
+        <div id="cardDreams" class="card">
+          <img class="image" src="./contents/images/CALI_DREAMS.jpg" />
+          <div class="card-informations">
+            <p class="card__song--name">Cali Dreams</p>
+            <p class="card__author--name">Vintage Culture, Wolf Player, Jets</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="audio" class="audio">
+        <audio id="audioPlay" controls>
+          <source src="" type="audio/mp3" />
+        </audio>
+      </div>
+    </div>
+    
+    <div class="line">
     </div>
 
-    <div class="carousel">
-        <div class="card">
-            <img src="./contents/images/THINGS.jpg">
-            <div class="card-informations">
-                <p class="card__song--name">Things</p>
-                <p class="card__author--name">Vintage Culture, Wolf Player, Jets</p>
-            </div>
-        </div>
-    </div>
+    <footer>
+      <div class="footer__content">
+        
+        <ul class="socials">
+          <li><a title="email" href="mailto:harrisonlima92@gmail.com"><i id="iconEmail" class="fa-solid fa-envelope"></i></a></li>
+          <li><a title="instagram" href="https://www.instagram.com/harrison_lima1512/"><i id="iconInstagram" class="fa-brands fa-instagram"></i></a></li>
+          <li><a title="linkedin" href="https://www.linkedin.com/in/harrison-fabiano-de-lima/"><i id="iconLinkedin" class="fa-brands fa-linkedin"></i></a></li>
+          <li><a title="github" href="https://github.com/HarrisonLima"><i id="iconGithub"class="fa-brands fa-github"></i></a></li>
+        </ul>
+      </div>
+
+      <div class="footer__bottom">
+        <p>copyright &copy;2023 Harrison Fabiano de Lima.</p>
+      </div>
+    </footer>
 
     <script src="./js/script.js"></script>
   </body>
