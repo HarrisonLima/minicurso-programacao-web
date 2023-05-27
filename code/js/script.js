@@ -1,32 +1,55 @@
-var audio = document.getElementById('audioPlay');
+let cards = document.getElementsByClassName("card");
+let audio = document.getElementById("audioPlay");
 
-var cardThings = document.getElementById('cardThings');
-var cardCante = document.getElementById('cardCante');
-var cardFerroriginalremix = document.getElementById('cardFerroriginalremix');
-var cardMoveyourbody = document.getElementById('cardMoveyourbody');
-var cardDreams = document.getElementById('cardDreams');
+let textSongClicked = document.querySelector(".text-song-clicked");
 
-audio.volume = 0.2;
+const classCardClicked = "card-clicked";
+const classCardClickedSongName = "card-clicked-song-name";
 
-cardThings.addEventListener("click", function() {
-    audio.src = "./contents/audios/things.mp3";
-    audio.play();  
-})
+for (let card of cards) {
+  card.addEventListener("click", function () {
+    let { song_path_name } = card.dataset;
 
-cardCante.addEventListener("click", function() {
-    audio.src = "./contents/audios/cante-por-nos.mp3";
-    audio.play();  
-})
-cardFerroriginalremix.addEventListener("click", function() {
-    audio.src = "./contents/audios/free-original.mp3";
-    audio.play();  
-})
-cardMoveyourbody.addEventListener("click", function() {
-    audio.src = "./contents/audios/move-your-body.mp3";
-    audio.play();  
-})
-cardDreams.addEventListener("click", function() {
-    audio.src = "./contents/audios/cali-dreams.mp3";
-    audio.play();  
-})
+    let cardSongName = card.getElementsByTagName("p")[0];
+    let cardAuthorName = card.getElementsByTagName("p")[1];
 
+    let cardIsClicked = card.classList.contains(classCardClicked);
+
+    cardRemoveClass(classCardClicked);
+
+    if (!cardIsClicked) {
+      card.classList.add(classCardClicked);
+      cardSongName.classList.add(classCardClickedSongName);
+
+      let text = `Você está escutando: <p class="text-card-clicked-song-name">${cardSongName.innerText}</p>
+      <p class="text-card-clicked-author-name">${cardAuthorName.innerText}</p>`;
+
+      textSongClicked.innerHTML = text;
+      textSongClicked.classList.add("text-card-clicked");
+      textSongClicked.classList.remove("no-text-card-clicked");
+
+      playSong(song_path_name);
+    } else {
+      card.classList.remove(classCardClicked);
+      textSongClicked.innerHTML = "Você não está escutando :(";
+      textSongClicked.classList.add("no-text-card-clicked");
+      playSong(null, false);
+    }
+  });
+}
+
+function playSong(songName, play = true) {
+  if (play) {
+    audio.src = `./contents/audios/${songName}.mp3`;
+    audio.play();
+  } else {
+    audio.src = "";
+  }
+}
+function cardRemoveClass(className) {
+  for (let card of cards) {
+    card.classList.remove(className);
+    let cardSongName = card.getElementsByTagName("p")[0];
+    cardSongName.classList.remove(classCardClickedSongName);
+  }
+}

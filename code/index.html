@@ -22,35 +22,35 @@
       <p class="title">Qual música você deseja ouvir?</p>
 
       <div class="carousel">
-        <div id="cardThings" class="card">
+        <div id="cardThings" data-song_path_name="things" class="card">
           <img class="image" src="./contents/images/THINGS.jpg" />
           <div class="card-informations">
             <p class="card__song--name">Things</p>
             <p class="card__author--name">Vintage Culture, Wolf Player, Jets</p>
           </div>
         </div>
-        <div id="cardCante" class="card">
+        <div id="cardCante" data-song_path_name="cante-por-nos" class="card">
           <img class="image" src="./contents/images/CANTE_POR_NOS.jpg" />
           <div class="card-informations">
             <p class="card__song--name">Cante por nós</p>
             <p class="card__author--name">Vintage Culture, Wolf Player, Jets</p>
           </div>
         </div>
-        <div id="cardFerroriginalremix" class="card">
+        <div id="cardFerroriginalremix" data-song_path_name="free-original" class="card">
           <img class="image" src="./contents/images/FREE_ORIGINAL_REMIX.jpg" />
           <div class="card-informations">
             <p class="card__song--name">Free original remix</p>
             <p class="card__author--name">Vintage Culture, Wolf Player, Jets</p>
           </div>
         </div>
-        <div id="cardMoveyourbody" class="card">
+        <div id="cardMoveyourbody" data-song_path_name="move-your-body" class="card">
           <img class="image" src="./contents/images/MOVE_YOUR_BODY.jpg" />
           <div class="card-informations">
             <p class="card__song--name">Move your body</p>
             <p class="card__author--name">Vintage Culture, Wolf Player, Jets</p>
           </div>
         </div>
-        <div id="cardDreams" class="card">
+        <div id="cardDreams" data-song_path_name="cali-dreams" class="card">
           <img class="image" src="./contents/images/CALI_DREAMS.jpg" />
           <div class="card-informations">
             <p class="card__song--name">Cali Dreams</p>
@@ -59,6 +59,7 @@
         </div>
       </div>
 
+      <p class="text-song-clicked no-text-card-clicked"></p>
       <div id="audio" class="audio">
         <audio id="audioPlay" controls>
           <source src="" type="audio/mp3" />
